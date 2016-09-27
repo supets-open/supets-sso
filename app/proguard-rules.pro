@@ -30,3 +30,6 @@
 -dontwarn okio.**
 -keep class okio.**{*;}
 
+# thirdbase
+-keep class com.supets.pet.threepartybase.R {*;}
+-keep class com.supets.pet.threepartybase.** {*;}
