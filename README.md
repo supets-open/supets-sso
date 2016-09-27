@@ -16,6 +16,11 @@
     第一步 把weiboSdk，threepartybase 两个依赖库添加到工程。
     第二步 注册三个平台的appId填写到threepartybase工程的KeyAndSecrets类中。同时修改配置文件需要将 tencent1101525942 数字改成注册的QQ应用的APPID
     第三步 参考demo工程使用。
+
+    混淆配置:
+    # thirdbase
+    -keep class com.supets.pet.threepartybase.R {*;}
+    -keep class com.supets.pet.threepartybase.** {*;}
     
 ## 3 如有问题，详细咨询
     
