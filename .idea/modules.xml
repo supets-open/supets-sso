@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ThreePartyPlatform.iml" filepath="$PROJECT_DIR$/ThreePartyPlatform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WeiboSDK/WeiboSDK.iml" filepath="$PROJECT_DIR$/WeiboSDK/WeiboSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/threepartybase/threepartybase.iml" filepath="$PROJECT_DIR$/threepartybase/threepartybase.iml" />
+    </modules>
+  </component>
+</project>
