@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ThreePartyPlatform.iml" filepath="$PROJECT_DIR$/ThreePartyPlatform.iml" />
       <module fileurl="file://$PROJECT_DIR$/WeiboSDK/WeiboSDK.iml" filepath="$PROJECT_DIR$/WeiboSDK/WeiboSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/supets-sso.iml" filepath="$PROJECT_DIR$/supets-sso.iml" />
       <module fileurl="file://$PROJECT_DIR$/threepartybase/threepartybase.iml" filepath="$PROJECT_DIR$/threepartybase/threepartybase.iml" />
     </modules>
   </component>
