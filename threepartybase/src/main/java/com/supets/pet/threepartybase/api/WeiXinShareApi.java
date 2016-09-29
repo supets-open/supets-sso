@@ -15,7 +15,7 @@ import com.tencent.mm.sdk.modelmsg.WXWebpageObject;
 
 import java.io.File;
 
-public class WeXinShareApi {
+public class WeiXinShareApi {
 
     public static final int THUMB_SIZE = 150;
     public static final int MAX_WEIXIN_PHOTO_SIZE = 32 * 1024; // 32KB

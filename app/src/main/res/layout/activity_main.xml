@@ -7,52 +7,30 @@
     android:orientation="vertical" >
 
     
-    <TextView android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="三方登录"
-        android:textSize="15sp"
-        android:textColor="#000000"
-        android:layout_marginTop="100dp"
-        android:layout_gravity="center_horizontal"/>
-    
-    <LinearLayout
-        android:layout_marginTop="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-    
-        android:gravity="center_horizontal"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/qq"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/three_qq_icon" />
-
-        <Button
-            android:id="@+id/weibo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/three_wb_icon" />
-
-        <Button
-            android:id="@+id/weixin"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/three_wx_icon" />
-    </LinearLayout>
-
-    
     <TextView
-        android:layout_marginTop="100dp"
-        android:id="@+id/dialog_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="left|center_horizontal"
-        android:textColor="#000000"
-        android:text="加载中。。。"
-        android:visibility="gone"
-        android:textSize="15sp" />
+        android:layout_margin="40dp"
+        android:layout_width="match_parent"
+        android:text="疯狂桔子三方账户框架"
+        android:textSize="24dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/com_sina_weibo_sdk_blue"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/auth"
+        android:text="三方授权"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <Button
+        android:text="三方登录"
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/share"
+        android:text="三方分享"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
 </LinearLayout>

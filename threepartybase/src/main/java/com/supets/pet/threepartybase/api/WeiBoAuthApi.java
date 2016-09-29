@@ -5,18 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.google.gson.Gson;
 import com.sina.weibo.sdk.auth.AuthInfo;
 import com.sina.weibo.sdk.auth.Oauth2AccessToken;
 import com.sina.weibo.sdk.auth.WeiboAuthListener;
 import com.sina.weibo.sdk.auth.sso.SsoHandler;
 import com.sina.weibo.sdk.exception.WeiboException;
-import com.sina.weibo.sdk.net.RequestListener;
-import com.sina.weibo.sdk.openapi.UsersAPI;
 import com.supets.pet.threepartybase.model.WeiBoToken;
-import com.supets.pet.threepartybase.model.WeiBoUserInfo;
-import com.supets.pet.threepartybase.storage.WeiboPref;
-import com.supets.pet.threepartybase.utils.LoginPlatForm;
 import com.supets.pet.threepartybase.utils.OauthListener;
 import com.supets.pet.threepartybase.utils.OauthLoginListener;
 
@@ -31,6 +25,10 @@ import com.supets.pet.threepartybase.utils.OauthLoginListener;
 public class WeiBoAuthApi {
 
     private static SsoHandler mSinaWeiboSsoHandler;
+
+    public static void auth(Activity activity, OauthListener listener) {
+        login(activity, listener, null);
+    }
 
     public static void login(final Activity activity,
                              final OauthListener listener,

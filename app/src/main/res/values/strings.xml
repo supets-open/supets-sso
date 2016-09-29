@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">ThreePartyPlatform</string>
+
+    <string name="app_name">疯狂桔子三方框架</string>
+
+    <string name="Weixin_share_success">分享成功</string>
+    <string name="Weixin_share_fail">分享失败</string>
+    <string name="Weixin_share_cancel">分享取消</string>
+    <string name="Weixin_login_cancel">授权取消</string>
+    <string name="Weixin_login_fail">授权失败</string>
+
 </resources>

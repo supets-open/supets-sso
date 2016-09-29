@@ -5,7 +5,6 @@ import android.util.Log;
 
 import com.supets.pet.threepartybase.model.QQToken;
 import com.supets.pet.threepartybase.model.QQUserInfo;
-import com.supets.pet.threepartybase.utils.LoginPlatForm;
 import com.supets.pet.threepartybase.utils.OauthLoginListener;
 import com.tencent.connect.UserInfo;
 import com.tencent.tauth.IUiListener;
@@ -40,8 +39,6 @@ public class QQLoginApi {
 					info.figureurl_qq_1 = obj.getString("figureurl_qq_1");
 					info.figureurl_qq_2 = obj.getString("figureurl_qq_2");
 					if (info != null && info.nickname != null) {
-						token.authtype = LoginPlatForm.QQZONE_PLATPORM;
-						info.authtype = LoginPlatForm.QQZONE_PLATPORM;
 						oauth.OauthLoginSuccess(token, info);
 						return;
 					}

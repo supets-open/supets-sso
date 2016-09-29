@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ThreePartyBase</string>
+    <string name="app_name">疯狂桔子</string>
 
     <string name="Weixin_register_fail">微信注册失败，请重启应用程序程序后再试。</string>
 

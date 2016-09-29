@@ -48,6 +48,7 @@ public class WeiboPref extends BasePref {
 		accessToken.setAccess_token(token);
 		accessToken.setUid(uid);
 
+
 		return accessToken;
 	}
 

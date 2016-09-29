@@ -3,6 +3,7 @@ package com.supets.pet.threepartybase.api;
 
 import android.content.Context;
 import android.text.TextUtils;
+
 import com.supets.pet.threepartybase.R;
 import com.supets.pet.threepartybase.model.WeiXinToken;
 import com.supets.pet.threepartybase.utils.ContextUtils;
@@ -41,6 +42,10 @@ public class WeiXinAuthApi {
         return getWXAPI().isWXAppInstalled();
     }
 
+    public static void auth() {
+        login();
+    }
+
     public static void login() {
 
         if (!isWXAPPInstalled()) {
@@ -63,7 +68,7 @@ public class WeiXinAuthApi {
     public static void getOauthAcces(String code, final OauthLoginListener oauth) {
         String url = "https://api.weixin.qq.com/" + "sns/oauth2/access_token?";
         OkHttpUtils.get().url(url)
-                .addParams("appid",KeyAndSecrets.WEIXINAPPID)
+                .addParams("appid", KeyAndSecrets.WEIXINAPPID)
                 .addParams("secret", KeyAndSecrets.WEIXIN_APPSECRET)
                 .addParams("code", code)
                 .addParams("grant_type", "authorization_code")
@@ -79,7 +84,7 @@ public class WeiXinAuthApi {
                         WeiXinToken mWeiXinToken = JSonUtil.fromJson(s, WeiXinToken.class);
                         if (mWeiXinToken != null && !TextUtils.isEmpty(mWeiXinToken.access_token) && !TextUtils.isEmpty(mWeiXinToken.openid)) {
                             WeiXinLoginApi.getUserInfo(mWeiXinToken, oauth);
-                        }else{
+                        } else {
                             oauth.OauthLoginFail();
                         }
                     }

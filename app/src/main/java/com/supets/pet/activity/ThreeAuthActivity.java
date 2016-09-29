@@ -27,7 +27,7 @@ import com.supets.pet.threepartybase.utils.OauthLoginListener;
 import com.supets.pet.threepartybase.utils.ToastUtils;
 import com.supets.pet.wxapi.WXEntryActivity;
 
-public class ThreeLoginActivity extends BaseActivity implements
+public class ThreeAuthActivity extends BaseActivity implements
         OnClickListener, OauthLoginListener, OauthListener {
     private MyReceiver mReceiver;
     private TextView mProressbar;
@@ -56,26 +56,22 @@ public class ThreeLoginActivity extends BaseActivity implements
     @Override
     public void onClick(View view) {
 
-        hideProgressDialog();
+        showProgressDialog();
 
         int id = view.getId();
         switch (id) {
             case R.id.qq:
-                QQAuthApi.login(this, this, this);
+                QQAuthApi.auth(this, this);
                 break;
             case R.id.weibo:
-                WeiBoAuthApi.login(this, this, this);
+                WeiBoAuthApi.auth(this, this);
                 break;
             case R.id.weixin:
-                WeiXinAuthApi.login();
+                WeiXinAuthApi.auth();
                 break;
             default:
                 break;
         }
-    }
-
-    private void hideProgressDialog() {
-        mProressbar.setVisibility(View.GONE);
     }
 
     @Override
@@ -86,39 +82,38 @@ public class ThreeLoginActivity extends BaseActivity implements
     }
 
     /**
-     * QQ，WeiBo，WeiXin登录成功回调
+     * WeiXin授权成功回调
      */
     @Override
-    public void OauthLoginSuccess(final AuthToken token, final AuthUser user) {
-        String uuid = "";//三方用户唯一ID
-        String name = "";
+    public void OauthLoginSuccess(AuthToken token, AuthUser user) {
+        authsuccess(token, user);
+    }
 
+    private void authsuccess(AuthToken token, AuthUser user) {
+        String uuid = "";//三方用户唯一ID
         if (token instanceof QQToken) {
             uuid = ((QQToken) token).getOpenid();
-            name = ((QQUserInfo) user).getNickname();
         }
         if (token instanceof WeiXinToken) {
             uuid = ((WeiXinUserInfo) user).getUnionid();
-            name = ((WeiXinUserInfo) user).getNickname();
         }
         if (token instanceof WeiBoToken) {
             uuid = ((WeiBoToken) token).getUid();
-            name = ((WeiBoUserInfo) user).getName();
         }
-        mProressbar.setText("状态:登录成功\n" + "ID:" + uuid + "\n昵称:" + name);
+        mProressbar.setText("状态:授权成功\n" + "ID:" + uuid);
     }
 
     @Override
     public void OauthLoginFail() {
-        mProressbar.setText("登录失败");
+        mProressbar.setText("授权失败");
     }
 
     /**
      * QQ，微博授权回调
      */
     @Override
-    public void OauthSuccess(AuthToken obj) {
-        showProgressDialog();
+    public void OauthSuccess(AuthToken token) {
+        authsuccess(token, null);
     }
 
     @Override
@@ -141,13 +136,13 @@ public class ThreeLoginActivity extends BaseActivity implements
                 String code = intent.getStringExtra("code");
                 showProgressDialog();
 
-                WeiXinAuthApi.getOauthAcces(code, ThreeLoginActivity.this);
+                WeiXinAuthApi.getOauthAcces(code, ThreeAuthActivity.this);
             }
         }
     }
 
     private void showProgressDialog() {
-        mProressbar.setText("正在为你登录");
+        mProressbar.setText("正在授权");
         mProressbar.setVisibility(View.VISIBLE);
     }
 
