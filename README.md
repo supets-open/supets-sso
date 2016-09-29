@@ -16,6 +16,8 @@
     第一步 把weiboSdk，threepartybase 两个依赖库添加到工程。
     第二步 注册三个平台的appId填写到threepartybase工程的KeyAndSecrets类中。同时修改配置文件需要将 tencent1101525942 数字改成注册的QQ应用的APPID
     第三步 更换demo工程签名文件为你的正式签名文件，修改下demo包名为你的应用包名即可编译测试。
+    
+    注意事项:微信平台应用签名一定要和本地签名一致，应用包名要一致。
 
     混淆配置:
     # thirdbase
