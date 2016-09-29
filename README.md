@@ -29,7 +29,8 @@
     -keep class com.supets.pet.threepartybase.R {*;}
     -keep class com.supets.pet.threepartybase.** {*;}
     
-## 3 如有问题，详细咨询
+## 问题咨询
     
     QQ：254608684
+    微信:b-s-lee
     EMAIL：254608684@qq.com
