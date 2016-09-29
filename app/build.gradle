@@ -21,16 +21,16 @@ android {
 
     signingConfigs {
         release {
-            keyAlias 'android'
-            keyPassword 'android'
+            keyAlias 'supetsandroid'
+            keyPassword 'xtxXTX123!@#'
             storeFile  file('./supets.keystore')
-            storePassword 'android'
+            storePassword 'xtxXTX123!@#'
         }
         debug {
-            keyAlias 'android'
-            keyPassword 'android'
+            keyAlias 'supetsandroid'
+            keyPassword 'xtxXTX123!@#'
             storeFile  file('./supets.keystore')
-            storePassword 'android'
+            storePassword 'xtxXTX123!@#'
         }
     }
 }

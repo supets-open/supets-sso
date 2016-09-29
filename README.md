@@ -3,6 +3,7 @@
 ## 0 初衷
     
     不想依赖三方平台，灵活定制。
+ ![DEMO](https://github.com/supets-open/supets-sso/blob/master/doc/360%E6%89%8B%E6%9C%BA%E5%8A%A9%E6%89%8B%E6%88%AA%E5%9B%BE0929_16_36_01.png?raw=true)
 
 ## 1 特性
 
