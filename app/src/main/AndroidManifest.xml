@@ -17,7 +17,6 @@
             </intent-filter>
         </activity>
 
-        <!-- weixin分享结果界面 -->
         <activity
             android:name=".wxapi.WXEntryActivity"
             android:exported="true"
@@ -28,18 +27,15 @@
 
         <activity
             android:name=".activity.ThreeShareActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent" />
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".activity.ThreeLoginActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent" />
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".activity.ThreeAuthActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent" />
+            android:screenOrientation="portrait" />
 
     </application>
 
