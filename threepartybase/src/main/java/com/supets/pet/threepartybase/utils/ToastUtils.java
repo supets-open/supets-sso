@@ -4,14 +4,6 @@ import android.text.TextUtils;
 import android.view.Gravity;
 import android.widget.Toast;
 
-/**
- * ThreePartyPlatform
- *
- * @user lihongjiang
- * @description
- * @date 2016/9/7
- * @updatetime 2016/9/7
- */
 public class ToastUtils {
 
     public static void showToastMessage(int resId){

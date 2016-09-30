@@ -14,14 +14,6 @@ import com.supets.pet.threepartybase.model.WeiBoToken;
 import com.supets.pet.threepartybase.utils.OauthListener;
 import com.supets.pet.threepartybase.utils.OauthLoginListener;
 
-/**
- * ThreePartyPlatform
- *
- * @user lihongjiang
- * @description
- * @date 2016/9/10
- * @updatetime 2016/9/10
- */
 public class WeiBoAuthApi {
 
     private static SsoHandler mSinaWeiboSsoHandler;

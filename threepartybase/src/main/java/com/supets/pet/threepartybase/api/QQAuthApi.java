@@ -17,14 +17,6 @@ import com.tencent.tauth.UiError;
 
 import org.json.JSONObject;
 
-/**
- * ThreePartyPlatform
- *
- * @user lihongjiang
- * @description
- * @date 2016/9/10
- * @updatetime 2016/9/10
- */
 public class QQAuthApi {
 
 
