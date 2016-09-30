@@ -12,6 +12,7 @@ public class MYApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		/**上下文处理，初始化okhttp***/
 		ContextUtils.init(this);
 		OkHttpUtils.initClient(new OkHttpClient.Builder().build());
 	}

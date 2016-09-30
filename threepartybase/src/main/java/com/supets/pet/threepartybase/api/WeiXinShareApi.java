@@ -33,13 +33,13 @@ public class WeiXinShareApi {
         }
         if (!WeiXinAuthApi.isWXAPPInstalled()) {
             ToastUtils.showToastMessage(ContextUtils.getApplication()
-                    .getString(R.string.Weixin_not_install_notify));
+                    .getString(R.string.threepartybase_weixin_not_install_notify));
             return;
         }
 
         if (!WeiXinAuthApi.getWXAPI().isWXAppSupportAPI()) {
             ToastUtils.showToastMessage(ContextUtils.getApplication()
-                    .getString(R.string.Weixin_not_support_API));
+                    .getString(R.string.threepartybase_weixin_not_support_API));
             return;
         }
 
@@ -74,13 +74,13 @@ public class WeiXinShareApi {
                                             boolean isfriends) {
         if (!WeiXinAuthApi.isWXAPPInstalled()) {
             ToastUtils.showToastMessage(ContextUtils.getApplication()
-                    .getString(R.string.Weixin_not_install_notify));
+                    .getString(R.string.threepartybase_weixin_not_install_notify));
             return;
         }
 
         if (!WeiXinAuthApi.getWXAPI().isWXAppSupportAPI()) {
             ToastUtils.showToastMessage(ContextUtils.getApplication()
-                    .getString(R.string.Weixin_not_support_API));
+                    .getString(R.string.threepartybase_weixin_not_support_API));
             return;
         }
 

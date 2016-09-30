@@ -19,7 +19,7 @@ public class QQShareApi {
     // 分享图片到qq空间
     public static void shareLocalPhotoToQQ(Activity activity, String path, String content,String webpageUrl, IUiListener listener) {
         if (!QQAuthApi.isQQInstalled()) {
-            ToastUtils.showToastMessage(R.string.QQ_not_install_notify);
+            ToastUtils.showToastMessage(R.string.threepartybase_qq_not_install_notify);
             return;
         }
         Bundle params = new Bundle();
@@ -40,7 +40,7 @@ public class QQShareApi {
     public static void shareWebPage(Activity activity, String imageUrl, String webpageUrl, String title, String text,
                                     IUiListener listener) {
         if (!QQAuthApi.isQQInstalled()) {
-            ToastUtils.showToastMessage(R.string.QQ_not_install_notify);
+            ToastUtils.showToastMessage(R.string.threepartybase_qq_not_install_notify);
             return;
         }
 
@@ -53,7 +53,7 @@ public class QQShareApi {
         imageUrls.add(imageUrl.replaceFirst("file://", ""));
         params.putStringArrayList(QQShare.SHARE_TO_QQ_IMAGE_URL, imageUrls);
 
-        params.putString(QQShare.SHARE_TO_QQ_APP_NAME, activity.getString(R.string.app_name));
+        params.putString(QQShare.SHARE_TO_QQ_APP_NAME, activity.getString(R.string.threepartybase_app_name));
         params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_DEFAULT);
         params.putInt(QQShare.SHARE_TO_QQ_EXT_INT, QQShare.SHARE_TO_QQ_FLAG_QZONE_AUTO_OPEN);
 

@@ -58,7 +58,7 @@ public class QQAuthApi {
                              final OauthListener listener, final OauthLoginListener oauth) {
 
         if (!isQQInstalled()) {
-            ToastUtils.showToastMessage(R.string.QQ_not_install_notify);
+            ToastUtils.showToastMessage(R.string.threepartybase_qq_not_install_notify);
             return;
         }
 
@@ -84,7 +84,7 @@ public class QQAuthApi {
                         token.setOpenid(obj.getString("openid"));
                         token.setExpires_in(obj.getString("expires_in"));
 
-                        if (token != null && token.getAccess_token() != null) {
+                        if (token.getAccess_token() != null) {
                             listener.OauthSuccess(token);
                             if (oauth != null) {
                                 QQLoginApi.getUserInfo(activity, oauth, token);

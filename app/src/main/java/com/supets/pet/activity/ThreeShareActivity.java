@@ -5,7 +5,6 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.TextView;
 
 import com.sina.weibo.sdk.exception.WeiboException;
 import com.sina.weibo.sdk.net.RequestListener;
@@ -40,6 +39,8 @@ public class ThreeShareActivity extends BaseActivity implements
         String webpageUrl = "http://image.baidu.com/search/index?tn=baiduimage&ps=1&ct=201326592&lm=-1&cl=2&nc=1&ie=utf-8&word=ds";
         String title = "标题";
         final String content = "内容";
+        String transaction="transaction";//可以自定义用来传递数据，作用相当bundle
+
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.icon);
 
         int id = view.getId();
@@ -51,10 +52,10 @@ public class ThreeShareActivity extends BaseActivity implements
                 weibo(content);
                 break;
             case R.id.weixin:
-                WeiXinShareApi.shareWebPage("id=10", title, content, imageUrl, webpageUrl, bitmap, false);
+                WeiXinShareApi.shareWebPage(transaction, title, content, imageUrl, webpageUrl, bitmap, false);
                 break;
             case R.id.weixin2:
-                WeiXinShareApi.shareWebPage("id=10", title, content, imageUrl, webpageUrl, bitmap, true);
+                WeiXinShareApi.shareWebPage(transaction, title, content, imageUrl, webpageUrl, bitmap, true);
                 break;
             default:
                 break;
@@ -69,24 +70,24 @@ public class ThreeShareActivity extends BaseActivity implements
                 WeiBoShareApi.shareToWeibo(ThreeShareActivity.this, content, null, new RequestListener() {
                     @Override
                     public void onComplete(String s) {
-                        ToastUtils.showToastMessage("分享weibo成功");
+                        ToastUtils.showToastMessage(R.string.share_success);
                     }
 
                     @Override
                     public void onWeiboException(WeiboException e) {
-                        ToastUtils.showToastMessage("分享weibo失败");
+                        ToastUtils.showToastMessage(R.string.share_fail);
                     }
                 });
             }
 
             @Override
             public void OauthFail() {
-                ToastUtils.showToastMessage("分享weibo失败");
+                ToastUtils.showToastMessage(R.string.share_fail);
             }
 
             @Override
             public void OauthCancel() {
-                ToastUtils.showToastMessage("分享weibo失败");
+                ToastUtils.showToastMessage(R.string.share_fail);
             }
         });
     }
@@ -95,17 +96,17 @@ public class ThreeShareActivity extends BaseActivity implements
         QQShareApi.shareWebPage(this, imageUrl, webpageUrl, title, content, new IUiListener() {
             @Override
             public void onComplete(Object o) {
-                ToastUtils.showToastMessage("分享QQ成功");
+                ToastUtils.showToastMessage(R.string.share_success);
             }
 
             @Override
             public void onError(UiError uiError) {
-                ToastUtils.showToastMessage("分享QQ失败");
+                ToastUtils.showToastMessage(R.string.share_fail);
             }
 
             @Override
             public void onCancel() {
-                ToastUtils.showToastMessage("分享QQ失败");
+                ToastUtils.showToastMessage(R.string.share_fail);
             }
         });
     }

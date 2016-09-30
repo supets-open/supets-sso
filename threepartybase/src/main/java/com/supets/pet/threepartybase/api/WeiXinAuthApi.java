@@ -36,7 +36,7 @@ public class WeiXinAuthApi {
 
     public static boolean isWXAPPInstalled() {
         if (getWXAPI() == null) {
-            ToastUtils.showToastMessage(R.string.Weixin_register_fail);
+            ToastUtils.showToastMessage(R.string.threepartybase_weixin_register_fail);
             return false;
         }
         return getWXAPI().isWXAppInstalled();
@@ -49,11 +49,11 @@ public class WeiXinAuthApi {
     public static void login() {
 
         if (!isWXAPPInstalled()) {
-            ToastUtils.showToastMessage(R.string.Weixin_not_install_notify_login);
+            ToastUtils.showToastMessage(R.string.threepartybase_weixin_not_install_notify_login);
             return;
         }
         if (!mWXAPI.isWXAppSupportAPI()) {
-            ToastUtils.showToastMessage(R.string.Weixin_not_support_API);
+            ToastUtils.showToastMessage(R.string.threepartybase_weixin_not_support_API);
             return;
         }
         //登录的第一步：请求链接code，请求成功后发送广播通知

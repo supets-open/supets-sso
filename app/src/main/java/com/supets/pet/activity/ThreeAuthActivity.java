@@ -105,7 +105,7 @@ public class ThreeAuthActivity extends BaseActivity implements
 
     @Override
     public void OauthLoginFail() {
-        mProressbar.setText("授权失败");
+        mProressbar.setText(R.string.auth_fail);
     }
 
     /**
@@ -118,12 +118,12 @@ public class ThreeAuthActivity extends BaseActivity implements
 
     @Override
     public void OauthFail() {
-        ToastUtils.showToastMessage("授权失败");
+        ToastUtils.showToastMessage(R.string.auth_fail);
     }
 
     @Override
     public void OauthCancel() {
-        ToastUtils.showToastMessage("取消授权");
+        ToastUtils.showToastMessage(R.string.auth_cancel);
     }
 
     /**

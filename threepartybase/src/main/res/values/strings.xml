@@ -1,14 +1,15 @@
 <resources>
-    <string name="app_name">疯狂桔子</string>
+    <!--注意需要替换你的应用名称，作为分享标识-->
+    <string name="threepartybase_app_name">疯狂桔子</string>
 
-    <string name="Weixin_register_fail">微信注册失败，请重启应用程序程序后再试。</string>
+    <string name="threepartybase_weixin_register_fail">微信注册失败，请重启应用程序程序后再试。</string>
 
-    <string name="Weixin_not_install_notify_login">您的手机未安装微信，安装后才能登录。</string>
+    <string name="threepartybase_weixin_not_install_notify_login">您的手机未安装微信，安装后才能登录。</string>
 
-    <string name="Weixin_not_install_notify">您的手机未安装微信，安装后才能分享。</string>
+    <string name="threepartybase_weixin_not_install_notify">您的手机未安装微信，安装后才能分享。</string>
 
-    <string name="Weixin_not_support_API">您的手机微信版本太低，建议安装最新版微信。</string>
+    <string name="threepartybase_weixin_not_support_API">您的手机微信版本太低，建议安装最新版微信。</string>
 
-    <string name="QQ_not_install_notify">您的手机未安装QQ，安装后才能登录。</string>
+    <string name="threepartybase_qq_not_install_notify">您的手机未安装QQ，安装后才能登录。</string>
 
 </resources>

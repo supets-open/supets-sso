@@ -20,11 +20,18 @@ android {
     }
 
     signingConfigs {
+        //<!--注意需要替换你的签名文件,必须保持和注册应用平台所填写的sign一致-->
         release {
-
+            keyAlias 'supetsandroid'
+            keyPassword 'xtxXTX123!@#'
+            storeFile  file('./supets.keystore')
+            storePassword 'xtxXTX123!@#'
         }
         debug {
-
+            keyAlias 'supetsandroid'
+            keyPassword 'xtxXTX123!@#'
+            storeFile  file('./supets.keystore')
+            storePassword 'xtxXTX123!@#'
         }
     }
 }

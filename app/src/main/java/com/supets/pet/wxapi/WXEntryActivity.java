@@ -15,6 +15,8 @@ import com.tencent.mm.sdk.modelbase.BaseResp.ErrCode;
 import com.tencent.mm.sdk.modelmsg.SendAuth;
 import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
 
+
+//<!--注意此类的父包名需要和你应用包名一致-->
 public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
 
     public static final String ACTION_WX_LOGIN_SUCEESS = "ACTION_WX_LOGIN_SUCEESS";
