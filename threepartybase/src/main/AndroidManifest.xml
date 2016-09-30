@@ -30,7 +30,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <!--注意需要替换你的app对于的id-->
-                <data android:scheme="tencent1105254618" />
+                <data android:scheme="tencent替换你的应用APPID" />
             </intent-filter>
         </activity>
 
